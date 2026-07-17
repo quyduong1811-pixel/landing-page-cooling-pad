@@ -23,7 +23,6 @@ body{
 }
 .btn{
     display: block;
-    width: 800px;
     background: linear-gradient(135deg, #11998e, #38ef7d);  
     border-radius: 999px;
     color: white;
