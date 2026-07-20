@@ -62,7 +62,7 @@ header{
     font-size: 26px;
     text-transform: uppercase;
 }
-.PainPoint1 .content1 p{
+.story .story__content p{
     line-height: 3;
     font-size: 22px;
 }
