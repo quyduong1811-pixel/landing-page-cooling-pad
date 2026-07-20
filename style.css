@@ -1,152 +1,228 @@
+/* ======================
+    CSS VALIABLES
+========================= */
+
+
 :root {
-  --bg-start: #000000;
-  --bg-end: #6b5d63;
-  --text-color: #ffffff;
-  --tech-cool-color: #00F2FE;
-  --cta-color: #1baf54;
+    /* ======== Background ========= */
+
+  --bg-body:linear-gradient(135deg, #fbfbfb, #6b5d63);
+  --bg-surface:#ededed;
+
+  /* ======== TEXT ========== */
+
+   --text-primary: #060101;
+   --text-secondary: #888;
+   --text-light: #fff;
+
+   /* ======== BRAND ========= */
+
+   --primary-color:#201baf;
+   --accent-color:#829a44;
+
+   /* ======== CTA ========= */
+
+   --cta-gradient-start: #11998e;
+   --cta-gradient-end: #38ef7d;
+
+   /* ===== LAYOUT ===== */
+
+   --container-width: 900px;
+
+   /* ===== RADIUS ===== */
+
+   --radius-md: 10px;
+   --radius-full: 999px;
+
+   /* ===== SHADOW ===== */
+
+   --shadow-btn: 0 8px 20px rgba(255,106,0,.35);
+   --shadow-btn-hover: 0 15px 35px rgba(255,106,0,.45);
+
+   /* ===== TRANSITION ===== */
+
+   --transition-fast: .3s;
+
 }
 *,*::before,
 *::after{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 body{
+
     font-family:"Be Vietnam Pro",sans-serif;
-    background: linear-gradient(135deg, #fbfbfb, var(--bg-end))
-    color:#060101;
+    background: var(--bg-body);
+
 }
 .container{
-    max-width: 900px;
+
+    max-width: var(--container-width);
     margin: 0 auto;
     text-align: center;
     padding: 40px 20px;
-    background-color: #ededed;
+    background-color: var(--bg-surface);
+
 }
 .hero__title{
-    color: #201baf;
+
+    color: var(--primary-color);
     line-height: 1.5;
+
 }
 .btn{
+
     display: block;
-    background: linear-gradient(135deg, #11998e, #38ef7d);  
-    border-radius: 999px;
+    background: linear-gradient(135deg,
+     var(--cta-gradient-start), var(--cta-gradient-end));  
+    border-radius: var(--radius-full);
     color: white;
     padding: 16px 36px;
     font-weight: 700;
-    transition: .3s;
-    box-shadow: 0 8px 20px rgba(255,106,0,.35);
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-btn);
     text-decoration: none;
+
 }
 /* BUtton CTA */
 .btn:hover{
+
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(255,106,0,.45);
+    box-shadow: var(--shadow-btn-hover);
+
 }
 .btn:active{
+
     transform: scale(.98);
+
 }
-header{
+.hero{
+
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
+
 }
-.content2-video video{
+.story__video video{
+
     width: 100%;
     max-width: 800px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     display: block;
     margin: auto;
+
 }
-.content2-video h2{
-    color: #829a44;
+.story__video-title{
+
+    margin-bottom: 2rem;
+    color: var(--accent-color);
     line-height: 2;
     font-weight: 800;
     font-size: 1.625rem;
     text-transform: uppercase;
+
 }
-.story .story__content p{
+.story__content p{
+
     line-height: 3;
     font-size: 1.375rem;
+
 }
-.PainPoint2 .media  img{
+.benefits .benefits__image  img{
+
     width: 100%;
     height: 100%;
+
 }
-.PainPoint2 .Benefit1 p {
+.benefits .benefits__content {
+
+    margin-bottom: 2rem;
     font-size: 1.375rem;
     line-height: 3;
+
 }
 .cta p{
-    color: #829a44;
+
+    color: var(--accent-color);
     font-size: 1.625rem;
     text-transform: uppercase;
     line-height: 2.4;
     font-weight: 800;
+
 }
-.text-feeback p{
+.testimonial__content p{
+
     font-size: 1.5rem;
     line-height: 2.5;
+
 }
-.text-feeback span{
-    color: #829a44;
+.testimonial__content span{
+
+    color: var(--accent-color);
     font-size: 1.625rem;
     text-transform: uppercase;
     font-weight: 800;
     line-height: 1.5;
+
 }
-.Feedback-img img{
-    /* flex-direction: column; */
+.testimonial__images img{
+
     width: 100%;
     height: 100%;
+
 }
-.cta-end span p{
+.cta--bottom .cta__text p{
+
     text-transform: uppercase;
     font-size: 1.625rem;
     font-weight: 800;
     line-height: 1.5;
-    color: #829a44;
+    color: var(--accent-color);
+
 }
 /* Footer End */
 footer{
-   max-width: 900px;
- /* background:#a89090; */
-    color:#121212;
+
+    max-width: 900px;
+    color:var(--text-primary);
     text-align:center;
     padding:50px 20px;
+
 }
 
-footer h3{
-    color:#829a44;
+.footer__title{
+
+    color:var(--accent-color);
     margin-bottom:15px;
+
 }
 
-footer p{
+.footer__text{
+
     max-width:700px;
     margin:10px auto;
     line-height:1.8;
     font-size: 18px;
+
 }
 
-.footer-links{
+.footer__links{
+
     display:flex;
     justify-content:center;
     gap:30px;
     margin:25px 0;
     flex-wrap:wrap;
+
 }
 
-.footer-links a{
-    color:#fff;
-    text-decoration:none;
-}
+.footer__copyright{
 
-.footer-links a:hover{
-    color:#ff6a00;
-}
+    color:var(--text-secondary);
 
-footer small{
-    color:#888;
 }
    
 
@@ -160,10 +236,7 @@ footer small{
 }
 /* Tablet */
 @media (max-width:992px) {
-    .container h1{
-    color: #201baf;
-    line-height: 1.5;
-    }
+    
 }
 /* Mobile */
 @media (max-width:768px) {
